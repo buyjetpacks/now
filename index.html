@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Style for the FAQ section */
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .faq-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<!-- FAQ Section -->
+<div class="faq-container">
+    <div class="faq-question" onclick="toggleFAQ('faq1')">What is a jet suit?</div>
+    <div class="faq-answer" id="faq1">A jet suit is a wearable device that allows the user to fly using small jet engines mounted on the suit.</div>
+
+    <div class="faq-question" onclick="toggleFAQ('faq2')">How does a jet suit work?</div>
+    <div class="faq-answer" id="faq2">Jet suits work by using jet engines to create thrust, lifting the user off the ground. The user controls the direction and speed of flight.</div>
+
+    <div class="faq-question" onclick="toggleFAQ('faq3')">Are jet suits safe?</div>
+    <div class="faq-answer" id="faq3">While jet suits can be safe when used properly, they require training and adherence to safety guidelines. Always follow the manufacturer's instructions and guidelines.</div>
+
+    <!-- Add more FAQ items as needed -->
+
+</div>
+
+<!-- JavaScript for FAQ toggle -->
+<script>
+    function toggleFAQ(faqId) {
+        var answer = document.getElementById(faqId);
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
